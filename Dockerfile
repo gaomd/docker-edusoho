@@ -16,7 +16,7 @@ RUN { \
     echo 'post_max_size=256M'; \
 } > /usr/local/etc/php/conf.d/upload-size.ini
 
-RUN echo 'max_execution_time=300' => /usr/local/etc/php/conf.d/execution-time.ini
+RUN echo 'max_execution_time=300' > /usr/local/etc/php/conf.d/execution-time.ini
 
 ADD https://getcomposer.org/download/1.0.0/composer.phar /usr/bin/composer.phar
 RUN chmod +x /usr/bin/composer.phar
